@@ -1,0 +1,9 @@
+{
+  "name": "m-shakeel-fabrics",
+  "version": "1.0.0",
+  "description": "M Shakeel Fabrics - Luxury E-Commerce Website",
+  "private": true,
+  "scripts": {
+    "build": "echo 'Static assets ready in web/'"
+  }
+}

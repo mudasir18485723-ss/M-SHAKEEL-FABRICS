@@ -1,0 +1,6 @@
+{
+  "name": "M Shakeel Fabrics",
+  "description": "VIP luxury clothing and fabrics e-commerce app with catalog, cart, checkout, order tracking, and admin dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

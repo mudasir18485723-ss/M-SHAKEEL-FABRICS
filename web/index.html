@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M SHAKEEL FABRICS | Luxury Eastern Textiles & Couture</title>
+  <meta name="description" content="Wear Your Style. Feel the Difference. Royal Boski Silk, Egyptian Giza Cotton, Karandi, and luxury festive couture. Cash on Delivery across Pakistan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement">
+    <div class="container announcement-inner">
+      <span>✨ NATIONWIDE CASH ON DELIVERY • FREE EXPRESS SHIPPING OVER RS. 5,000</span>
+      <span class="announcement-promo">USE CODE <strong>VIP10</strong> FOR 10% OFF</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation">
+        <span></span><span></span><span></span>
+      </div>
+
+      <div class="brand-logo" onclick="navigateTo('home')">
+        <div class="logo-crest">MSF</div>
+        <div class="brand-text">
+          <span class="brand-name">M SHAKEEL FABRICS</span>
+          <span class="brand-tagline">EST. 1928 • LUXURY TEXTILES & COUTURE</span>
+        </div>
+      </div>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#home" class="nav-link active" onclick="navigateTo('home')">Home</a>
+        <a href="#shop" class="nav-link" onclick="navigateTo('shop')">Shop</a>
+        <a href="#collections" class="nav-link" onclick="filterCategoryAndNavigate('Unstitched Fabrics')">Fabrics</a>
+        <a href="#tracking" class="nav-link" onclick="navigateTo('tracking')">Track Order</a>
+        <a href="#about" class="nav-link" onclick="navigateTo('about')">Legacy</a>
+        <a href="#contact" class="nav-link" onclick="navigateTo('contact')">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn" onclick="navigateTo('shop')" title="Search Catalog">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+        <button class="action-btn cart-btn" onclick="toggleCart()" title="Shopping Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-badge" id="cartCountBadge">0</span>
+        </button>
+        <button class="action-btn admin-btn" onclick="navigateTo('admin')" title="Admin Dashboard">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Views Container -->
+  <main id="mainContent">
+
+    <!-- HOME PAGE -->
+    <section id="homeView" class="page-view active">
+      <!-- Hero Banner -->
+      <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <span class="hero-badge">ROYAL SARTORIAL HERITAGE</span>
+          <h1 class="hero-title">Wear Your Style.<br><span>Feel the Difference.</span></h1>
+          <p class="hero-subtitle">
+            Curating Pakistan's most revered unstitched fabrics, pure silk Boski, artisanal Karandi, and luxury eastern ensembles since 1928.
+          </p>
+          <div class="hero-cta-group">
+            <button class="btn btn-primary" onclick="navigateTo('shop')">Shop Collection</button>
+            <button class="btn btn-outline" onclick="filterCategoryAndNavigate('Unstitched Fabrics')">Explore Fabrics</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Cards -->
+      <div class="container section-padding">
+        <div class="section-header text-center">
+          <span class="section-kicker">CURATED COLLECTIONS</span>
+          <h2 class="section-title">Explore Our Finest Weaves</h2>
+        </div>
+        <div class="category-grid">
+          <div class="category-card" onclick="filterCategoryAndNavigate('Men\'s Wear')">
+            <div class="cat-img cat-mens"></div>
+            <div class="cat-info">
+              <span class="cat-tag">BESPOKE</span>
+              <h3>Men's Wear</h3>
+              <p>Royal Boski, Karandi & Giza Cotton</p>
+              <span class="cat-link">Explore Collection &rarr;</span>
+            </div>
+          </div>
+          <div class="category-card" onclick="filterCategoryAndNavigate('Women\'s Wear')">
+            <div class="cat-img cat-womens"></div>
+            <div class="cat-info">
+              <span class="cat-tag">FESTIVE</span>
+              <h3>Women's Wear</h3>
+              <p>Embroidered Chiffon & Silk Velvet</p>
+              <span class="cat-link">Explore Collection &rarr;</span>
+            </div>
+          </div>
+          <div class="category-card" onclick="filterCategoryAndNavigate('Unstitched Fabrics')">
+            <div class="cat-img cat-fabrics"></div>
+            <div class="cat-info">
+              <span class="cat-tag">HERITAGE</span>
+              <h3>Unstitched Fabrics</h3>
+              <p>Mercerized Latha & Tropical Twills</p>
+              <span class="cat-link">Explore Collection &rarr;</span>
+            </div>
+          </div>
+          <div class="category-card" onclick="filterCategoryAndNavigate('New Arrivals')">
+            <div class="cat-img cat-arrivals"></div>
+            <div class="cat-info">
+              <span class="cat-tag">EXCLUSIVE</span>
+              <h3>New Arrivals</h3>
+              <p>Pashmina Shawls & Luxury Jacquard</p>
+              <span class="cat-link">Explore Collection &rarr;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Products Grid -->
+      <div class="bg-cream section-padding">
+        <div class="container">
+          <div class="section-header flex-between">
+            <div>
+              <span class="section-kicker">SIGNATURE EDITIONS</span>
+              <h2 class="section-title">Featured Masterpieces</h2>
+            </div>
+            <button class="btn-text" onclick="navigateTo('shop')">View Full Catalog &rarr;</button>
+          </div>
+          <div class="product-grid" id="featuredProductsContainer">
+            <!-- Dynamic JS injection -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Heritage Story -->
+      <div class="container section-padding">
+        <div class="heritage-card">
+          <div class="heritage-content">
+            <span class="section-kicker gold-text">THE M SHAKEEL HERITAGE</span>
+            <h2 class="heritage-title">Ninety-Eight Years of Unrivaled Textile Excellence</h2>
+            <p>
+              From our origin in traditional loom weaving to our state-of-the-art combing mills, M SHAKEEL FABRICS stands as an epitome of eastern sartorial prestige. Every yard is inspected for yarn tensile strength, color fastness, and opulent fall.
+            </p>
+            <div class="heritage-stats">
+              <div class="stat-item">
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Pure Fiber Guarantee</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">50k+</span>
+                <span class="stat-label">Satisfied Connoisseurs</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">2-4 Days</span>
+                <span class="stat-label">Express Delivery (COD)</span>
+              </div>
+            </div>
+            <button class="btn btn-gold" onclick="navigateTo('about')">Read Brand Story & Showrooms</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Customer Reviews -->
+      <div class="bg-cream section-padding">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="section-kicker">PATRON TESTIMONIALS</span>
+            <h2 class="section-title">Voices of Our Patronage</h2>
+          </div>
+          <div class="reviews-grid">
+            <div class="review-card">
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">"The 7-Pound Royal Boski is unmatched in weight and fall. Wore it for my brother's wedding and received non-stop compliments. M Shakeel Fabrics is our family's trusted brand."</p>
+              <div class="review-author">
+                <strong>Barrister Daniyal Khan</strong>
+                <span>Lahore • Bought Royal Boski Silk 7-Pound</span>
+              </div>
+            </div>
+            <div class="review-card">
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">"Ordered the Empress Embroidered Chiffon online. Cash on delivery was swift and the tilla embroidery is even more breathtaking in person. Truly VIP luxury."</p>
+              <div class="review-author">
+                <strong>Syeda Mahnoor Zaidi</strong>
+                <span>Islamabad • Bought Empress Chiffon 3pc</span>
+              </div>
+            </div>
+            <div class="review-card">
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">"Egyptian Giza Cotton platinum weave has that crisp yet soft touch you only find in top international luxury brands. Fast shipping to Clifton."</p>
+              <div class="review-author">
+                <strong>Chaudhry Waqas</strong>
+                <span>Karachi • Bought Imperial Egyptian Giza Cotton</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="container section-padding">
+        <div class="newsletter-box text-center">
+          <h2 class="section-title">Join The VIP Fabric Circle</h2>
+          <p class="newsletter-desc">Receive early access to seasonal Boski releases, private festive catalogs, and exclusive patron privileges.</p>
+          <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+            <input type="email" id="newsletterInput" placeholder="Enter your email address" required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+          <div id="newsletterSuccess" class="success-message" style="display:none;">Thank you! You are now subscribed to M Shakeel VIP updates.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOP PAGE -->
+    <section id="shopView" class="page-view">
+      <div class="shop-header bg-navy text-center">
+        <div class="container">
+          <span class="section-kicker gold-text">M SHAKEEL FABRICS CATALOG</span>
+          <h1 class="page-title text-white">Luxury Fabrics & Royal Attire</h1>
+          <p class="text-gold-light">Woven to perfection with authentic yarn integrity</p>
+        </div>
+      </div>
+
+      <div class="container section-padding">
+        <!-- Search & Filter Controls -->
+        <div class="catalog-controls">
+          <div class="search-bar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input type="text" id="catalogSearch" placeholder="Search fabrics, Karandi, Boski, Latha, suits..." oninput="handleSearch(this.value)">
+          </div>
+
+          <div class="filter-row">
+            <div class="category-pills" id="categoryPills">
+              <button class="pill active" onclick="setCategoryFilter('All')">All</button>
+              <button class="pill" onclick="setCategoryFilter('Men\'s Wear')">Men's Wear</button>
+              <button class="pill" onclick="setCategoryFilter('Women\'s Wear')">Women's Wear</button>
+              <button class="pill" onclick="setCategoryFilter('Unstitched Fabrics')">Unstitched Fabrics</button>
+              <button class="pill" onclick="setCategoryFilter('New Arrivals')">New Arrivals</button>
+            </div>
+
+            <div class="sort-selector">
+              <label for="sortSelect">Sort:</label>
+              <select id="sortSelect" onchange="handleSort(this.value)">
+                <option value="featured">Featured</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="rating">Highest Rated</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="product-grid" id="shopProductsContainer">
+          <!-- Dynamic JS injection -->
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT DETAIL VIEW -->
+    <section id="detailView" class="page-view">
+      <div class="container section-padding">
+        <button class="btn-back" onclick="navigateTo('shop')">&larr; Back to Catalog</button>
+        <div class="product-detail-layout" id="productDetailContainer">
+          <!-- Dynamic JS injection -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ORDER TRACKING VIEW -->
+    <section id="trackingView" class="page-view">
+      <div class="shop-header bg-navy text-center">
+        <div class="container">
+          <span class="section-kicker gold-text">LIVE DISPATCH TRACKING</span>
+          <h1 class="page-title text-white">Track Your Order</h1>
+          <p class="text-gold-light">Check real-time fulfillment and courier dispatch status</p>
+        </div>
+      </div>
+
+      <div class="container section-padding">
+        <div class="tracking-search-card">
+          <h3>Lookup Order Status</h3>
+          <p>Enter your 9-character Order ID (e.g. <code>MSF-84920</code>) or mobile phone number used during checkout:</p>
+          <div class="tracking-input-group">
+            <input type="text" id="trackingQueryInput" placeholder="Enter Order ID (MSF-XXXXX) or Phone Number">
+            <button class="btn btn-primary" onclick="handleTrackSearch()">Track Order</button>
+          </div>
+        </div>
+
+        <div id="trackingResultContainer" class="tracking-results">
+          <!-- Dynamic JS injection -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT VIEW -->
+    <section id="aboutView" class="page-view">
+      <div class="shop-header bg-navy text-center">
+        <div class="container">
+          <span class="section-kicker gold-text">THE M SHAKEEL LEGACY</span>
+          <h1 class="page-title text-white">Master Weavers of Pure Textiles</h1>
+          <p class="text-gold-light">Heritage, integrity, and prestige since 1928</p>
+        </div>
+      </div>
+
+      <div class="container section-padding">
+        <div class="about-grid">
+          <div class="about-card">
+            <h2>The Sartorial Genesis</h2>
+            <p>Founded with a profound reverence for the master weavers of the subcontinent, M SHAKEEL FABRICS has remained the definitive destination for patrons seeking uncompromising fabric purity. We believe clothing is an extension of character—crafted to be felt, admired, and cherished.</p>
+            <p>From our celebrated Chinese Silk 7-pound Royal Boski to extra-long staple Egyptian Giza cottons and handspun winter Karandi, every single bolt is spun with strict yarn count controls and organic finishing treatments that preserve fabric softness through years of wearing.</p>
+          </div>
+          <div class="about-card">
+            <h2>Our Weaving Pillars</h2>
+            <ul class="pillars-list">
+              <li><strong>Pure Yarn Integrity:</strong> Zero synthetic adulteration in our pure silk, latha, and fine wool lines.</li>
+              <li><strong>Color Fastness Guarantee:</strong> Reactive vat dyeing resistant to intense summer heat and repeated laundering.</li>
+              <li><strong>Pre-Shrunk & Mercerized:</strong> Engineered dimensional stability so your bespoke tailoring fits right out of the box.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT VIEW -->
+    <section id="contactView" class="page-view">
+      <div class="shop-header bg-navy text-center">
+        <div class="container">
+          <span class="section-kicker gold-text">GET IN TOUCH</span>
+          <h1 class="page-title text-white">Contact & Showrooms</h1>
+          <p class="text-gold-light">Direct phone, WhatsApp concierge, and flagship boutique locations</p>
+        </div>
+      </div>
+
+      <div class="container section-padding">
+        <div class="contact-grid">
+          <div class="contact-info-card">
+            <h3>Flagship Boutiques</h3>
+            <div class="info-item">
+              <strong>Lahore Flagship:</strong>
+              <p>Shop 14-16, Liberty Commercial Complex, Gulberg III, Lahore</p>
+            </div>
+            <div class="info-item">
+              <strong>Karachi Experience Lounge:</strong>
+              <p>Plot 8-C, Zamzama Boulevard, Phase V, DHA, Karachi</p>
+            </div>
+            <div class="info-item">
+              <strong>Phone & WhatsApp Orders:</strong>
+              <p>+92 300 1234567 • +92 42 35789000</p>
+            </div>
+            <div class="info-item">
+              <strong>Email:</strong>
+              <p>support@mshakeelfabrics.com</p>
+            </div>
+          </div>
+
+          <div class="contact-form-card">
+            <h3>Send an Inquiry</h3>
+            <form onsubmit="handleContactSubmit(event)">
+              <div class="form-group">
+                <label for="contactName">Your Name</label>
+                <input type="text" id="contactName" required placeholder="e.g. Tariq Mehmood">
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Email Address</label>
+                <input type="email" id="contactEmail" required placeholder="tariq@example.com">
+              </div>
+              <div class="form-group">
+                <label for="contactMsg">Message / Tailoring Inquiry</label>
+                <textarea id="contactMsg" rows="4" required placeholder="Your message regarding yardage or delivery..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+              <div id="contactSuccess" class="success-message" style="display:none; margin-top:12px;">Thank you! Your message has been received by our fabric concierge.</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADMIN DASHBOARD VIEW -->
+    <section id="adminView" class="page-view">
+      <div class="shop-header bg-navy text-center">
+        <div class="container">
+          <span class="section-kicker gold-text">OPERATIONS PORTAL</span>
+          <h1 class="page-title text-white">Administrator Dashboard</h1>
+          <p class="text-gold-light">Live order fulfillment, inventory management, and store analytics</p>
+        </div>
+      </div>
+
+      <div class="container section-padding" id="adminContainer">
+        <!-- Dynamic JS: PIN Gate or Admin Tabs -->
+      </div>
+    </section>
+  </main>
+
+  <!-- CART SLIDEOUT DRAWER -->
+  <div class="cart-drawer-backdrop" id="cartBackdrop" onclick="toggleCart()"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3>My Shopping Bag</h3>
+      <button class="close-btn" onclick="toggleCart()">&times;</button>
+    </div>
+
+    <!-- Free Delivery Bar -->
+    <div class="shipping-threshold-bar" id="shippingBarContainer">
+      <!-- Injected by JS -->
+    </div>
+
+    <div class="cart-items-container" id="cartItemsList">
+      <!-- Injected by JS -->
+    </div>
+
+    <div class="cart-drawer-footer" id="cartFooter">
+      <div class="promo-box">
+        <input type="text" id="promoInput" placeholder="Promo code (e.g. VIP10)">
+        <button class="btn btn-sm" onclick="applyPromo()">Apply</button>
+      </div>
+      <div id="promoMsg" class="promo-feedback"></div>
+
+      <div class="summary-line">
+        <span>Subtotal:</span>
+        <span id="cartSubtotalText">Rs. 0</span>
+      </div>
+      <div class="summary-line" id="discountRow" style="display:none; color:#1E7E34;">
+        <span>VIP Discount:</span>
+        <span id="cartDiscountText">- Rs. 0</span>
+      </div>
+      <div class="summary-line">
+        <span>Delivery (COD):</span>
+        <span id="cartDeliveryText">FREE</span>
+      </div>
+      <div class="summary-line total-line">
+        <span>Estimated Total:</span>
+        <span id="cartTotalText">Rs. 0</span>
+      </div>
+
+      <button class="btn btn-primary btn-block" onclick="openCheckoutModal()">Proceed to Checkout (COD)</button>
+    </div>
+  </aside>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="modal-backdrop" id="checkoutModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Secure Checkout (Cash on Delivery)</h3>
+        <button class="close-btn" onclick="closeCheckoutModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="checkoutForm" onsubmit="handlePlaceOrder(event)">
+          <div class="form-group">
+            <label for="custName">Full Name *</label>
+            <input type="text" id="custName" required placeholder="e.g. Barrister Daniyal Khan">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="custPhone">Mobile Number (for Courier SMS) *</label>
+              <input type="tel" id="custPhone" required placeholder="0300 1234567">
+            </div>
+            <div class="form-group">
+              <label for="custEmail">Email Address</label>
+              <input type="email" id="custEmail" placeholder="patron@example.com">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="custAddress">Delivery Address *</label>
+            <input type="text" id="custAddress" required placeholder="Street address, house/flat #, sector">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="custCity">City *</label>
+              <select id="custCity">
+                <option value="Lahore">Lahore</option>
+                <option value="Karachi">Karachi</option>
+                <option value="Islamabad">Islamabad</option>
+                <option value="Rawalpindi">Rawalpindi</option>
+                <option value="Faisalabad">Faisalabad</option>
+                <option value="Multan">Multan</option>
+                <option value="Peshawar">Peshawar</option>
+                <option value="Quetta">Quetta</option>
+                <option value="Sialkot">Sialkot</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Payment Method</label>
+              <div class="payment-badge">Cash on Delivery (Default)</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="custNotes">Special Instructions / Tailoring Notes</label>
+            <input type="text" id="custNotes" placeholder="e.g. Call before delivery">
+          </div>
+
+          <div class="checkout-review-summary" id="checkoutSummaryBox">
+            <!-- Injected by JS -->
+          </div>
+
+          <div id="checkoutErrorMsg" class="error-banner" style="display:none;"></div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg" id="confirmOrderBtn">
+            Confirm & Place Order (Cash on Delivery)
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ORDER SUCCESS MODAL -->
+  <div class="modal-backdrop" id="orderSuccessModal">
+    <div class="modal-card text-center">
+      <div class="success-icon">✓</div>
+      <h2>Order Confirmed!</h2>
+      <p>Thank you for choosing M SHAKEEL FABRICS. Your order has been placed successfully.</p>
+      <div class="order-id-display">
+        <span>Order Reference:</span>
+        <strong id="confirmedOrderId">MSF-00000</strong>
+      </div>
+      <p class="courier-note">Our artisans are preparing your bolt for dispatch. Delivery will be completed within 2-4 business days via Express COD courier.</p>
+      <div class="modal-action-row">
+        <button class="btn btn-primary" onclick="trackConfirmedOrder()">Track Order Progress</button>
+        <button class="btn btn-outline" onclick="closeOrderSuccessModal()">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <div class="brand-logo footer-logo">
+          <div class="logo-crest">MSF</div>
+          <span class="brand-name text-white">M SHAKEEL FABRICS</span>
+        </div>
+        <p class="footer-desc">Curating Pakistan's most revered unstitched fabrics, pure silk Boski, and royal festive ensembles since 1928.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#home" onclick="navigateTo('home')">Home</a></li>
+          <li><a href="#shop" onclick="navigateTo('shop')">Shop Collection</a></li>
+          <li><a href="#tracking" onclick="navigateTo('tracking')">Order Tracking</a></li>
+          <li><a href="#about" onclick="navigateTo('about')">Brand Legacy</a></li>
+          <li><a href="#contact" onclick="navigateTo('contact')">Showrooms</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Patron Services</h4>
+        <ul>
+          <li>Nationwide Express COD (2-4 Days)</li>
+          <li>100% Pure Fiber Verification</li>
+          <li>Hassle-Free 7-Day Exchange</li>
+          <li>Bespoke Tailoring Inquiries</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Concierge & WhatsApp</h4>
+        <p><strong>Hotline:</strong> +92 300 1234567</p>
+        <p><strong>Showrooms:</strong> Liberty Gulberg III, Lahore & Zamzama DHA, Karachi</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container flex-between">
+        <p>&copy; 2026 M SHAKEEL FABRICS. All rights reserved.</p>
+        <p class="gold-text">Wear Your Style. Feel the Difference.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
